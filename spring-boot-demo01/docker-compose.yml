@@ -5,9 +5,9 @@ services:
     ports:
     - 60001:60001/tcp
     environment:
-      server-profile: prod
-      server-port: 60001
-      server-name: demo-prod
+      server-profile=prod
+      server-port=60001
+      server-name=demo-prod
     restart: always
     labels:
       aliyun.scale: '1'
