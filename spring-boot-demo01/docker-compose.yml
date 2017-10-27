@@ -3,7 +3,7 @@ services:
   spring-boot-demo-01:
     image: registry-vpc.cn-hangzhou.aliyuncs.com/fengxin58/spring-boot-demo:0.0.1.RELEASE
     ports:
-    - 80:80/tcp
+    - 60001:60001/tcp
     environment:
       server-profile: prod
       server-port: 60001
