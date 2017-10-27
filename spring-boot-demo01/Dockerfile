@@ -1,4 +1,4 @@
-FROM ncc0706/alpine-java8
+FROM registry.cn-hangzhou.aliyuncs.com/fengxin58/java:8
 
 MAINTAINER niuyuxian <ncc0706@gmail.com>
 
@@ -12,4 +12,5 @@ ENV SERVER_NAME hello-spring-boot
 
 EXPOSE 4200
 COPY target/${APP_NAME}-${APP_VERSION}.jar /opt/app.jar
+
 ENTRYPOINT ["-Dspring.profiles.active=${SERVER_PROFILE}","-Dserver.port=${SERVER_PORT}","-Dspring.application.name=${SERVER_NAME}","-jar","/opt/app.jar"]
